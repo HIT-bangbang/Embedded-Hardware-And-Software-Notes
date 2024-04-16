@@ -410,12 +410,12 @@ $$
 
 $$
 \begin{cases}
-V_4=\left(\frac{2}{3} V_{d c}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)=\frac{2}{3} V_{d c} \\
-V_6=\left(\frac{1}{3} V_{d c}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}-\frac{2}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)=\frac{2}{3} V_{d c}\left(\frac{1}{2}+j \frac{\sqrt{3}}{2}\right)=\frac{2}{3} V_{d c} e^{j \frac{1}{3} \pi} \\
-V_2=\left(-\frac{1}{3} V_{d c}+\frac{2}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)=\frac{2}{3} V_{d c}\left(-\frac{1}{2}+j \frac{\sqrt{3}}{2}\right)=\frac{2}{3} V_{d c} e^{j \frac{2}{3} \pi} \\
-V_3=\left(-\frac{2}{3} V_{d c}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)=-\frac{2}{3} V_{d c} \\
-V_1=\left(-\frac{1}{3} V_{d c}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}+\frac{2}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)=\frac{2}{3} V_{d c} e^{j \frac{4}{3} \pi} \\
-V_5=\left(\frac{1}{3} V_{d c}-\frac{2}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)=\frac{2}{3} V_{d c} e^{j \frac{5}{3} \pi} \\
+V_4=\left(\frac{2}{3} V_{d c}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)= V_{d c} \\
+V_6=\left(\frac{1}{3} V_{d c}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}-\frac{2}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)= V_{d c}\left(\frac{1}{2}+j \frac{\sqrt{3}}{2}\right)= V_{d c} e^{j \frac{1}{3} \pi} \\
+V_2=\left(-\frac{1}{3} V_{d c}+\frac{2}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)= V_{d c}\left(-\frac{1}{2}+j \frac{\sqrt{3}}{2}\right)= V_{d c} e^{j \frac{2}{3} \pi} \\
+V_3=\left(-\frac{2}{3} V_{d c}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)=- V_{d c} \\
+V_1=\left(-\frac{1}{3} V_{d c}-\frac{1}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}+\frac{2}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)= V_{d c} e^{j \frac{4}{3} \pi} \\
+V_5=\left(\frac{1}{3} V_{d c}-\frac{2}{3} V_{d c} \cdot e^{j \cdot 2 \pi / 3}+\frac{1}{3} V_{d c} \cdot e^{j \cdot 4 \pi / 3}\right)= V_{d c} e^{j \frac{5}{3} \pi} \\
 V_0=V_7=0
 \end{cases}
 $$
@@ -686,13 +686,13 @@ $T_0=T_7=\frac{1}{2}(T_s–T_4–T_6)$
 
 如上图所示，我们可以将$T_4$平均分为两份，放在$T_6$两侧，从而形成的五段式矢量序列，如上图所示。这种序列可以保证每个状态切换时，只有一相桥臂的开关动作。
 
-其中， $T_0 = 1 - T_4 - T_6 $
+其中， $T_0 = 1 - T_4 - T_6$
 
 ### 七段法
 
 <image src="七段法.jpg">
 
-进一步地，在五段法的基础上，将$T_6$也劈开两等份，再中间插入$T_7$，从而形成的七段式矢量序列，如上图所示。这种序列可以保证每个状态切换时，只有一相桥臂的开关动作。
+进一步地，在五段法的基础上，将$T_6$也劈开两等份，再中间插入$T_7$（这个图有点问题，中间应该式插入$T_7$），从而形成的七段式矢量序列，如上图所示。这种序列可以保证每个状态切换时，只有一相桥臂的开关动作。
 
 其中， $T_0 = T_7 = \frac{1}{2} (1 - T_4 - T_6)$
 
@@ -788,10 +788,6 @@ $$T_6=\sqrt{3} \frac{|V_{out}|}{V_{dc}}T_ssin\left(\theta\right)$$
 <image src="电流位置控制.jpg">
 
 由于去掉了速度环，这里的位置环我们使用完整的PID控制，即把微分项加上（因为位置的微分就是速度，这样可以减小位置控制的震荡加快收敛；积分项的作用是为了消除静态误差）。
-
-
-# 6.4扇区判断
-
 
 
 # 七、对$I_d$进行PID控制的意义
